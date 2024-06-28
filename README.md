@@ -46,7 +46,7 @@ The server is very lightweight and opens up in a terminal from an executable.
 
 ## Usage 🚀
 
-To use the RoTracker extension, you will need to provide your Roblox ID and Roblox cookie. You can find how to obtain these here:
+To use the RoTracker extension, you will need to provide your Roblox ID and Roblox cookie. You can find how to get those here:
 
 - [Roblox ID](https://github.com/Gotzya/RoTracker/releases/tag/v1.0.0)
 - [Roblox Cookie](https://github.com/Gotzya/RoTracker/releases/tag/v1.0.0)
