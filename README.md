@@ -46,12 +46,12 @@ The server is very lightweight and opens up in a terminal from an executable.
 
 ## Usage 🚀
 
-To use the RoTracker extension, you will need to provide your Roblox ID and Roblox cookie. You can find how to obtain these here:
+To use the RoTracker extension, you will need to provide your Roblox ID and Roblox cookie. You can find how to get those here:
 
 - [Roblox ID](https://github.com/Gotzya/RoTracker/releases/tag/v1.0.0)
 - [Roblox Cookie](https://github.com/Gotzya/RoTracker/releases/tag/v1.0.0)
 
-Once you have these two, enter them into their respective textboxes and press enter to confirm the values.
+Once you have these two, go to the RoTracker settings and enter them into their respective text boxes. Note you must press enter to confirm the values after pasting.
 
 ![App Screenshot](screenshots/settings.png)
 
@@ -62,4 +62,4 @@ Once you have these two, enter them into their respective textboxes and press en
 
 ## Privacy and Ethical Considerations 🛡️
 
-RoTracker is designed to provide useful metrics for Roblox players. However, it is crucial to address the potential misuse of this tool for spying or invading others' privacy. The extension only tracks data of users who are your friends or friends with the profile you provided the user ID for, adhering to Roblox's existing privacy settings. Users should only use RoTracker for legitimate purposes, respecting the privacy and consent of others. Misuse of this tool to spy on or harass other players is strongly discouraged and may violate Roblox's terms of service.
+RoTracker is designed to provide useful metrics for Roblox players. However, it is crucial to address the potential misuse of this tool for spying or invading others' privacy. The extension only tracks the data of users who are your friends or friends with the profile you provided the user ID for, adhering to Roblox's existing privacy settings. Users should only use RoTracker for legitimate purposes, respecting the privacy and consent of others. Misuse of this tool to spy on or harass other players is strongly discouraged and may violate Roblox's terms of service.
