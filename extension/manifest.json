@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "RoTracker",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "background",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "./background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.roblox.com/*"],
+        "js": ["./content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "./popup/popup.html",
+      "default_icon": {
+        "16": "./icons/RoTracker16.png",
+        "48": "./icons/RoTracker48.png",
+        "128": "./icons/RoTracker128.png"
+      }
+    }
+  }

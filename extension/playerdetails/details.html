@@ -1,0 +1,91 @@
+<!-- chrome-extension://ijbbdnaakdjejinpikookognknkcpdgg/playerdetails/details.html?player_ID= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="details.js" type="module"></script>
+    <title>RoTracker Player Details</title>
+</head>
+<body>
+    <div>
+        <div class="profile-header rounded">
+            <div class="profile-picture-container">
+                <a target="_blank" href=""></a>
+            </div>
+            <div class="profile-data-holder">
+                <div class="profile-name-holder">
+                    <h1 class="player-display-name"></h1>
+                    <h1 class="player-username"></h1>
+                    <h1 class="date-added">Added on 6/9/42</h1>
+                </div>
+                <div class="time-data-holder">
+                    <div class="time-online-holder">
+                        <h1 class="time-title">Time Online:</h1>
+                        <h1 class="time-online"></h1>
+                    </div>
+                    <div class="time-in-game-holder">
+                        <h1 class="time-title">Time In-game:</h1>
+                        <h1 class="time-in-game"></h1>
+                    </div>
+                    <div class="time-in-studio-holder">
+                        <h1 class="time-title">Time In-studio:</h1>
+                        <h1 class="time-in-studio"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="visit-options-bar">
+            <div class="visited-places-title">Visited Places:</div>
+            <button class="search-button">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/>
+                </svg>                  
+            </button>
+            <input class="search-bar" rows="1" type="number" placeholder="Search Place ID"></input>
+            <button class="sort-order-button">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="6 0 26 26">
+                    <path class="sort-path" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h10M5 17h7"/>
+                </svg>                                 
+            </button>
+            <select class="sort-dropdown">
+                <option value="date">Date</option>
+                <option value="time-played">Time Played</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="player-visit-card-container">
+    </div>
+
+    <template id="player-visit-card-template">
+        <div class="player-visit-card">
+            <div class="place-thumbnail-container">
+                <a target="_blank" href="https://cdn.vox-cdn.com/thumbor/6bvYA8Z7hBRrMJ965Rb20uKB628=/0x0:1192x795/1200x628/filters:focal(596x398:597x399)/cdn.vox-cdn.com/uploads/chorus_asset/file/22312759/rickroll_4k.jpg">
+                    <img src="../icons/aef394f5ddef6e9d040581861f69eb7c.png">
+                </a>
+            </div>
+            <div class="place-information-container">
+                <div>
+                    <h1 class="place-name"></h1>
+                </div>
+                <div class="time-information-container">
+                    <div class="time-played-container">
+                        <h1 class="time-title">Total Played</h1>
+                        <h1 id="time-played"></h1>
+                    </div>
+                    <div class="last-played-container">
+                        <h1 class="time-title" >Last Played</h1>
+                        <h1 id="last-played"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <div class="spacer"></div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="top-bar">
+        <button class="add-button" aria-label="Add Player">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 12h14m-7 7V5"/>
+            </svg>             
+        </button>
+
+        <input class="search-bar" rows="1" type="number" placeholder="Add Player ID" aria-label="Player ID">
+
+        <button class="setting-button" aria-label="Settings">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13v-2a1 1 0 0 0-1-1h-.757l-.707-1.707.535-.536a1 1 0 0 0 0-1.414l-1.414-1.414a1 1 0 0 0-1.414 0l-.536.535L14 4.757V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v.757l-1.707.707-.536-.535a1 1 0 0 0-1.414 0L4.929 6.343a1 1 0 0 0 0 1.414l.536.536L4.757 10H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h.757l.707 1.707-.535.536a1 1 0 0 0 0 1.414l1.414 1.414a1 1 0 0 0 1.414 0l.536-.535 1.707.707V20a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-.757l1.707-.708.536.536a1 1 0 0 0 1.414 0l1.414-1.414a1 1 0 0 0 0-1.414l-.535-.536.707-1.707H20a1 1 0 0 0 1-1Z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+            </svg>         
+        </button>
+    </header>
+
+    <div class="settings-page">
+        <div class="user-id-holder">
+            <div class="settings-information-holder">
+                <h1 class="subtitle">User ID:</h1>
+                <h1 class="description">Your Roblox user ID. <a href="url" target="_blank">Help?</a></h1>    
+            </div>
+            <input class="text-area user_ID_textbox" rows="1" type="number" placeholder="">
+        </div>
+
+        <div class="user-id-holder">
+            <div class="settings-information-holder">
+                <h1 class="subtitle">Auth Cookie:</h1>
+                <h1 class="description">Your Roblox authentication cookie. <a href="url" target="_blank">Help?</a></h1>    
+            </div>
+            <input class="text-area auth_cookie_textbox" rows="1" placeholder="">
+        </div>
+    </div>
+
+    <div class="no-server-page">
+        <div class="error-message-container">
+            <h1>Error: cannot establish connection with server</h1>
+        </div>
+    </div>
+
+    <main>
+        <section class="player-card-holder">
+            <div class="placement-indicator" draggable="false"></div>
+        </section>
+        
+        <template class="player-card-template">
+            <div class="player-card" draggable="true">
+                <div class="player-information">
+                    <div class="profile-picture-container">
+                        <a class="profile-picture">
+                            <img src="..\icons\isCircular.png">
+                        </a>
+                        <div class="status-icon"></div>
+                    </div>
+                    <div class="profile-name-container">
+                        <h1 class="profile-name">SenorSmellyJelly</h1>
+                        <h1 class="profile-status">In-Game</h1>
+                    </div>
+                    <div class="option-dots-container" draggable="false">
+                        <button class="option-dots" aria-label="Options">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="6 6 12 12">
+                                <path stroke-linecap="round" d="M12 6h.01M12 12h.01M12 18h.01"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div class="player-options">
+                        <button class="remove-button">
+                            REMOVE
+                        </button>
+                        <button class="view-detail-button">
+                            DETAILS
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </main>
+</body>
+</html>

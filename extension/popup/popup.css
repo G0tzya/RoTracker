@@ -1,0 +1,520 @@
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    width: 350px;
+    height: 300px;
+    /* background-color: #212121 !important; */
+    background-color: #171717 !important;
+    margin: 0;
+}
+
+.top-bar {
+    /* background-color: #171717; */
+    background-color: #212121;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.search-bar {
+    float: left;
+    resize: none !important;
+    height: 34.25px; /* 35px reduced by 25% */
+    width: 150px; /* 200px reduced by 25% */
+    font-family: Builder Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-size: 22.75px; /* 25px reduced by 25% */
+    vertical-align: middle;
+    border-radius: 3.75px; /* 5px reduced by 25% */
+    padding: 3.75px; /* 5px reduced by 25% */
+    padding-bottom: 2.25px; /* 3px reduced by 25% */
+    padding-top: 5.25px; /* 7px reduced by 25% */
+    background-color: #171717;
+    color: #c1c1c1;
+    outline: 0px;
+    border: 0px;
+    transition-duration: 0.1s;
+    counter-increment: none !important;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.search-bar:focus {
+    background-color: #282828 !important;
+}
+
+.search-bar:active {
+    background-color: #282828 !important;
+}
+
+.search-bar::placeholder {
+    color: #484848;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.add-button {
+    transition-duration: 0.1s;
+    float: left;
+    height: 41.75px; /* 45px reduced by 25% */
+    width: 41.75px; /* 45px reduced by 25% */
+    background-color: #171717;
+    border-radius: 3.75px; /* 5px reduced by 25% */
+    border-style: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.add-button svg {
+    margin-top: 2.25px; /* 3px reduced by 25% */
+    transition-duration: 0.1s;
+    stroke: #484848;
+}
+
+.add-button:hover {
+    background-color: #282828;
+}
+
+.add-button:hover svg {
+    stroke: #c1c1c1;
+}
+
+.add-button:active {
+    background-color: #202020;  
+}
+
+.setting-button {
+    transition-duration: 0.1s;
+    float: right;
+    height: 40px; /* 45px reduced by 25% */
+    width: 40px; /* 45px reduced by 25% */
+    background-color: #212121;
+    border-style: none;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-right: 15px; 
+}
+
+.settings-active svg{
+    stroke: #aaaaaa !important;
+}
+
+.settings-active:hover svg {
+    stroke: #949494 !important;
+}
+
+.setting-button svg {
+    height: 40px; /* 45px reduced by 25% */
+    width: 40px; /* 45px reduced by 25% */
+    margin-top: 2.25px; /* 3px reduced by 25% */
+    transition-duration: 0.1s;
+    stroke: #484848;
+}
+
+.setting-button:hover svg {
+    stroke: #aaaaaa;
+}
+
+.player-card-holder {
+    max-height: 240px; /* Set a maximum height for the container */
+    overflow-y: scroll; /* Hide the default scrollbar */
+    overflow-x: hidden; /* Hide the default scrollbar */
+}
+
+/* Define custom scrollbar styles */
+.player-card-holder::-webkit-scrollbar {
+    position: fixed;
+    margin: 0px;
+    width: 8px;
+    opacity: 0; /* Initially hide the scrollbar */
+    transition: opacity 0.15s ease; /* Smooth transition for opacity */
+}
+
+/* Adjust scrollbar height when visible */
+.player-card-holder:hover::-webkit-scrollbar-thumb {
+    background: rgb(39, 39, 39); /* Set the color of the scrollbar handle */
+    border-radius: 6px; /* Set the border radius of the scrollbar handle */
+}
+
+/* Track */
+.player-card-holder::-webkit-scrollbar-track {
+    width: 10px;
+}
+
+/* Handle on hover */
+.player-card-holder::-webkit-scrollbar-thumb:hover {
+    background: #484848; /* Set the color of the scrollbar handle on hover */
+}
+
+.player-card {
+    width: 330px;
+    height: 70px;
+    border-radius: 7px;
+    margin-left: 9px;
+    margin-top: 6px;
+    align-items: center;
+    position: relative;
+}
+
+.player-card-offline {
+    background-color: #1b1b1b !important;
+}
+
+.player-card-offline h1 {
+    color: #484848 !important;
+}
+
+.player-card-offline .profile-picture{
+    background-color: #272727;
+}
+
+.player-card-offline img{
+    filter: brightness(0.7);
+}
+
+.player-card-offline .status-icon {
+    background-color: rgb(77, 77, 77);
+}
+
+.player-card-online {
+    background-color: #212121;
+}
+
+.player-card-online .status-icon{
+    background-color: rgb(0, 140, 221);
+}
+
+.player-card-ingame {
+    background-color: #212121;
+}
+
+.player-card-ingame .status-icon{
+    background-color: rgb(15, 179, 0);
+}
+
+.player-card-instudio {
+    background-color: #212121;
+}
+
+.player-card-instudio .status-icon{
+    background-color: #F68802;
+}
+
+.option-dots-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70px;
+    width: 20px;
+    display: none; /* Hide by default */
+    margin-right: 4px;
+}
+
+.option-dots-container svg {
+    float: right;
+    stroke: #484848;
+    height: 40px;
+    width: 20px;
+    stroke-width: 4;
+    margin-top: 1.5px;
+    margin-right: -2px;
+}
+
+.option-dots:hover svg {
+    stroke: #aaaaaa;
+}
+
+
+.player-card:hover .option-dots-container {
+    display: block; /* Show on hover */
+}
+
+.option-dots {
+    width: 20px;
+    height: 60px;
+    padding: 0px;
+    margin-top: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    cursor: pointer;
+}
+
+.player-options {
+    position: absolute;
+    width: 330px;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.41);
+    border-radius: 7px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    display: none;
+}
+
+.player-options {
+    display: none; /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out; /* Smooth transition for opacity */
+}
+
+.player-options.show {
+    display: block;
+    opacity: 1;
+}
+
+
+.remove-button {
+    font-weight: 900;
+    font-size: 13px;
+    border-radius: 3px;
+    float: left;
+    margin-left: 40px;
+    margin-top: 15px;
+    width: 100px;
+    height: 40px;
+    background-color: #b90000;
+    border-style: none;
+    cursor: pointer;
+    transition-duration: 0.15s;
+    color:  #e0e0e0;
+}
+
+.remove-button:hover {
+    background-color: #d60000;
+    transition-duration: 0.15s;
+}
+
+.remove-button:active {
+    background-color: #9b0000;
+    transition-duration: 0.15s;
+}
+
+.button {
+    display: inline-block; /* Makes the element respect padding and centering */
+    cursor: pointer;
+    text-align: center; /* Centers the text inside the element */
+}
+
+.view-detail-button {
+    font-weight: 900;
+    font-size: 13px;
+    border-radius: 3px;
+    margin-left: 50px;
+    margin-top: 15px;
+    width: 100px;
+    height: 40px;
+    background-color: #313131;
+    border-style: none;
+    cursor: pointer;
+    transition-duration: 0.15s;
+    color:  #e0e0e0;
+    text-decoration-line: none;
+}
+
+.view-detail-button:hover {
+    background-color: #3d3d3d;
+    transition-duration: 0.15s;
+}
+
+.view-detail-button:active {
+    background-color: #272727;
+    transition-duration: 0.15s;
+}
+
+.dragging {
+    filter: brightness(0.7);
+}
+
+.placement-indicator {
+    width: 330px;
+    height: 3px;
+    background-color: rgb(95, 95, 95);
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    position: relative;
+    display: none;
+}
+
+.player-information {
+    float: left;
+    width: 330px;
+}
+
+.profile-picture-container {
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+
+.profile-picture {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: #797979;
+    border-radius: 50%;
+}
+
+.status-icon {
+    /* background-color: rgb(0, 196, 33); */
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin-left: 50px;
+    margin-top: 50px;
+    border-radius: 100%;
+}
+
+.profile-picture img{
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+}
+
+.profile-name-container {
+    float: left;
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.profile-name {
+    font-size: 20px;
+    margin: 0;
+    color:  #e0e0e0;
+    /* color:  #aaaaaa; */
+}
+
+.profile-status {
+    margin: 0;
+    color:  #aaaaaa;
+    font-size: 14px;
+    /* color:  #aaaaaa; */
+}
+
+.settings-page.show {
+    opacity: 1;
+    pointer-events:all;
+}
+
+.user-id-holder {
+    background-color: #212121;
+    width: 330px;
+    height: 110px;
+    border-radius: 7px; 
+    margin-left: 9px;
+    margin-top: 6px;
+}
+
+.settings-page {
+    position: fixed;
+    background-color: #171717;
+    width: 350px;
+    height: 245px;
+    z-index:9999;
+    top: 60px;
+    left: 0;
+    transition: opacity 0.15s ease-in-out; /* Smooth transition for opacity */
+    opacity: 0;
+    pointer-events:none;
+}
+
+.no-server-page {
+    position: fixed;
+    background-color: #171717;
+    width: 350px;
+    height: 245px;
+    z-index:9990;
+    top: 60px;
+    left: 0;
+    display: none;
+    pointer-events:none;
+}
+
+.error-message-container {
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 85px;
+    width: 300px;
+    text-wrap: wrap;
+}
+
+.no-server-page h1 {
+    color: #8b8b8b;
+    font-size: 20px;
+}
+
+.text-area {
+    float: left;
+    resize: none !important;
+    height: 25px; /* 35px reduced by 25% */
+    width: 303px; /* 200px reduced by 25% */
+    font-family: Builder Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-size: 19px; /* 25px reduced by 25% */
+    vertical-align: middle;
+    border-radius: 3.75px; /* 5px reduced by 25% */
+    padding: 3.75px; /* 5px reduced by 25% */
+    padding-bottom: 2.25px; /* 3px reduced by 25% */
+    padding-top: 5.25px; /* 7px reduced by 25% */
+    background-color: #171717;
+    color: #c1c1c1;
+    outline: 0px;
+    border: 0px;
+    transition-duration: 0.1s;
+    counter-increment: none !important;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.text-area:focus {
+    background-color: #282828 !important;
+}
+
+.text-area:active {
+    background-color: #282828 !important;
+}
+
+.text-area::placeholder {
+    color: #484848;
+}
+
+.settings-information-holder {
+    float: left;
+    position:sticky;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.subtitle {
+    color: #c1c1c1;
+    font-size: 23px;
+    margin: 0;
+}
+
+.description {
+    color: #8b8b8b;
+    font-size: 15px;
+    margin: 0;
+}
+
+.description a{
+    color: #8b8b8b;
+    font-size: 15px;
+    margin: 0;
+}
+
+.description a:hover{
+    color: #a0a0a0;
+    font-size: 15px;
+    margin: 0;
+}

@@ -1,0 +1,378 @@
+body {
+    background-color: #171717 !important;
+}
+
+.rounded {
+    border-radius: 7.5px; /* 10px reduced by 25% */
+}
+
+.profile-header {
+    margin: auto;
+    margin-top: 37.5px; /* 50px reduced by 25% */
+    background-color: #212121;
+    max-width: 900px; /* 900px reduced by 25% */
+    min-width: 900px; /* 900px reduced by 25% */
+    height: 225px; /* 300px reduced by 25% */
+}
+
+.profile-picture-container {
+    float: left;
+    height: 195px; /* 260px reduced by 25% */
+    margin-top: 15px; /* 20px reduced by 25% */
+    margin-left: 15px; /* 20px reduced by 25% */
+    width: fit-content;
+    background-color: #2F2F2F;
+    border-radius: 50%;
+}
+
+.profile-picture {
+    float: left;
+    height: 195px; /* 260px reduced by 25% */
+    background-color: #2F2F2F;
+    border-radius: 50%;
+}
+
+.profile-picture:hover {
+    cursor: pointer;
+    filter: brightness(0.7);
+}
+
+.profile-picture {
+    transition: filter 0.2s;
+}
+
+.profile-data-holder {
+    float: left;
+}
+
+.profile-name-holder {
+    margin-left: 30px; /* 40px reduced by 25% */
+    font-family: Builder Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-weight: 800;
+}
+
+.player-display-name {
+    color: rgb(241, 241, 241);
+    font-size: 36px; /* 48px reduced by 25% */
+    margin-top: 22.5px; /* 30px reduced by 25% */
+    margin-bottom: 7.5px; /* 10px reduced by 25% */
+}
+
+.player-username {
+    color: #c1c1c1;
+    margin: 0;
+    font-size: 15px; /* 20px reduced by 25% */
+}
+
+.time-data-holder {
+    font-family: Builder Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-weight: 800;
+    width: 412.5px; /* 550px reduced by 25% */
+    height: 75px; /* 100px reduced by 25% */
+    margin-top: 52.5px; /* 70px reduced by 25% */
+    margin-left: 30px; /* 40px reduced by 25% */
+}
+
+.time-online-holder {
+    margin-right: 37.5px; /* 50px reduced by 25% */
+    float: left;
+}
+
+.time-in-game-holder {
+    margin-right: 37.5px; /* 50px reduced by 25% */
+    float: left;
+}
+
+.time-online {
+    font-size: 37.5px; /* 50px reduced by 25% */
+    margin-top: 3.75px; /* 5px reduced by 25% */
+    color: rgb(241, 241, 241);
+}
+
+.time-in-game {
+    font-size: 37.5px; /* 50px reduced by 25% */
+    margin-top: 3.75px; /* 5px reduced by 25% */
+    color: rgb(241, 241, 241);
+}
+
+.time-title {
+    margin-top: 22.5px; /* 30px reduced by 25% */
+    font-size: 15px; /* 20px reduced by 25% */
+    margin: 0;
+    color: #787878;
+}
+
+.visit-options-bar {
+    margin: auto;
+    margin-top: 7.5px; /* 10px reduced by 25% */
+    max-width: 900px; /* 900px reduced by 25% */
+    min-width: 900px; /* 900px reduced by 25% */
+    height: 37.5px; /* 50px reduced by 25% */
+    font-weight: 800;
+}
+
+.visited-places-title {
+    float: left;
+    font-family: Builder Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-size: 18.75px; /* 25px reduced by 25% */
+    margin-top: 3.75px; /* 5px reduced by 25% */
+    margin-left: 7.5px; /* 10px reduced by 25% */
+    color: #787878;
+}
+
+.search-button {
+    transition-duration: 0.15s;
+    float: right;
+    height: 33.75px; /* 45px reduced by 25% */
+    width: 33.75px; /* 45px reduced by 25% */
+    background-color: #212121;
+    border-radius: 3.75px; /* 5px reduced by 25% */
+    border-style: none;
+    cursor: pointer;
+}
+
+.search-button svg {
+    margin-top: 2.25px; /* 3px reduced by 25% */
+    stroke: #c1c1c1;
+}
+
+.search-button:hover {
+    background-color: #282828;
+}
+
+.search-button:active {
+    background-color: #202020;
+}
+
+.search-bar {
+    float: right;
+    resize: none !important;
+    height: 26.25px; /* 35px reduced by 25% */
+    width: 150px; /* 200px reduced by 25% */
+    font-family: Builder Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-size: 18.75px; /* 25px reduced by 25% */
+    vertical-align: middle;
+    border-radius: 3.75px; /* 5px reduced by 25% */
+    margin-right: 3.75px; /* 5px reduced by 25% */
+    padding: 3.75px; /* 5px reduced by 25% */
+    padding-bottom: 2.25px; /* 3px reduced by 25% */
+    padding-top: 5.25px; /* 7px reduced by 25% */
+    background-color: #212121;
+    color: #c1c1c1;
+    outline: 0px;
+    border: 0px;
+    transition-duration: 0.2s;
+    counter-increment: none !important;
+}
+
+.search-bar:focus {
+    background-color: #282828 !important;
+}
+
+.search-bar:active {
+    background-color: #282828 !important;
+}
+
+.search-bar::placeholder {
+    color: #484848;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.sort-options {
+    float: right;
+    display: flex;
+    align-items: center;
+    margin-right: 7.5px; /* 10px reduced by 25% */
+}
+
+.sort-dropdown {
+    height: 30px; /* 40px reduced by 25% */
+    width: 150px; /* 200px reduced by 25% */
+    font-family: Builder Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-size: 18.75px; /* 25px reduced by 25% */
+    border-radius: 3.75px; /* 5px reduced by 25% */
+    background-color: #252525;
+    color: #c1c1c1;
+    border: 0px;
+    margin-right: 3.75px; /* 5px reduced by 25% */
+    padding: 3.75px; /* 5px reduced by 25% */
+    outline: 0;
+    transition-duration: 0.2s;
+}
+
+.sort-dropdown:hover {
+    cursor: pointer;
+    background-color: #282828;
+}
+
+.sort-button {
+    height: 33.75px; /* 45px reduced by 25% */
+    background-color: #212121;
+    border-radius: 3.75px; /* 5px reduced by 25% */
+    border: 0px;
+    color: #c1c1c1;
+    cursor: pointer;
+    font-family: Builder Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-size: 18.75px; /* 25px reduced by 25% */
+    padding: 0 7.5px; /* 10px reduced by 25% */
+    transition-duration: 0.2s;
+}
+
+.sort-button:hover {
+    background-color: #282828;
+}
+
+.sort-button:active {
+    background-color: #252525;
+}
+
+.sort-dropdown {
+    float: right;
+    height: 33.75px; /* 45px reduced by 25% */
+    width: 135px; /* 180px reduced by 25% */
+    font-family: Builder Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-size: 18.75px; /* 25px reduced by 25% */
+    border-radius: 3.75px; /* 5px reduced by 25% */
+    background-color: #212121;
+    color: #c1c1c1;
+    border: 0px;
+    margin-right: 3.75px; /* 5px reduced by 25% */
+    padding: 3.75px; /* 5px reduced by 25% */
+    outline: 0;
+}
+
+.sort-dropdown option {
+    background-color: #252525;
+    color: #c1c1c1 !important;
+    font-family: Builder Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    padding: 3.75px; /* 5px reduced by 25% */
+    border: 0px;
+    outline: none;
+    border-radius: 3.75px; /* 5px reduced by 25% */
+}
+
+.sort-dropdown option:hover {
+    background-color: #404040;
+    color: #ffffff !important;
+}
+
+.sort-order-button {
+    float: right;
+    height: 33.75px; /* 45px reduced by 25% */
+    width: 33.75px; /* 45px reduced by 25% */
+    background-color: #212121;
+    border-radius: 3.75px; /* 5px reduced by 25% */
+    border: 0px;
+    color: #c1c1c1;
+    cursor: pointer;
+    font-family: Builder Sans, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-size: 1.875ch; /* 2.5ch reduced by 25% */
+    padding: 0 7.5px; /* 10px reduced by 25% */
+    margin-right: 3.75px; /* 5px reduced by 25% */
+    transition-duration: 0.2s;
+}
+
+.sort-order-button:hover {
+    background-color: #282828;
+}
+
+.sort-order-button:active {
+    background-color: #252525;
+}
+
+.sort-button:hover {
+    background-color: #282828;
+}
+
+.sort-button:active {
+    background-color: #252525;
+}
+
+.player-visit-card-container {
+    margin-top: 3.75px; /* 5px reduced by 25% */
+    flex: auto;
+}
+
+.player-visit-card {
+    flex-direction: row;
+    margin: auto;
+    margin-bottom: 7.5px; /* 10px reduced by 25% */
+    background-color: #212121;
+    max-width: 900px; /* 900px reduced by 25% */
+    min-width: 900px; /* 900px reduced by 25% */
+    height: 112.5px; /* 150px reduced by 25% */
+    border-radius: 7.5px; /* 10px reduced by 25% */
+}
+
+.place-thumbnail-container {
+    float: left;
+    height: 112.5px; /* 150px reduced by 25% */
+    width: 225px; /* 300px reduced by 25% */
+    transition-duration: 0.2s;
+    overflow: hidden;
+}
+
+.place-thumbnail-container img {
+    transition: filter 0.2s;
+}
+
+.place-thumbnail-container img:hover {
+    cursor: pointer;
+    filter: brightness(0.7);
+}
+
+.place-thumbnail-container img {
+    margin-top: 7.5px; /* 10px reduced by 25% */
+    margin-left: 7.5px; /* 10px reduced by 25% */
+    height: 97.5px; /* 130px reduced by 25% */
+    width: 210px; /* 280px reduced by 25% */
+    object-fit: cover;
+    border-radius: 7.5px; /* 10px reduced by 25% */
+}
+
+.place-information-container {
+    float: left;
+    margin-left: 7.5px; /* 10px reduced by 25% */
+    margin-top: 0px;
+    color: rgb(241, 241, 241);
+    width: 442.5px; /* 590px reduced by 25% */
+}
+
+.place-name {
+    font-size: 3ch; /* 4ch reduced by 25% */
+    height: 45px; /* 60px reduced by 25% */
+}
+
+.place-information-container h1 {
+    margin-top: 7.5px; /* 10px reduced by 25% */
+    margin-bottom: 7.5px; /* 10px reduced by 25% */
+}
+
+.time-information-container {
+    position: relative;
+    flex-direction: left;
+}
+
+.time-information-container h1 {
+    flex-direction: left;
+    margin: 0;
+}
+
+.time-played-container {
+    float: left;
+    font-size: 1.125ch; /* 1.5ch reduced by 25% */
+    margin: 0;
+    margin-right: 37.5px; /* 50px reduced by 25% */
+}
+
+.last-played-container {
+    float: left;
+    font-size: 1.125ch; /* 1.5ch reduced by 25% */
+    margin: 0;
+    margin-right: 37.5px; /* 50px reduced by 25% */
+}
