@@ -20,7 +20,7 @@ use std::fs::File;
 use std::env;
 use std::fs;
 
-const SERVER_TPS: u64 = 60;
+const SERVER_TPS: u64 = 20;
 lazy_static! {
     static ref TRACKED_PLAYER_ARRAY: Arc<Mutex<Vec<Profile>>> = Arc::new(Mutex::new(Vec::new()));
     static ref TRACKED_USER_ID: Arc<Mutex<u64>> = Arc::new(Mutex::new(0));
@@ -137,9 +137,10 @@ struct AuthCookiePayload {
 
 #[post("/set_auth_cookie")]
 async fn set_auth_cookie(player_data: web::Json<AuthCookiePayload>) -> impl Responder {
-    *(CURRENT_AUTH_COOKIE.lock().unwrap()) = player_data.cookie.clone();
-    save_env_variable("AUTH_COOKIE", &player_data.cookie.clone());
-    println!("Set auth cookie to: {}", player_data.cookie);
+    let cookie = parse_roblox_cookie(player_data.cookie.clone()).unwrap();
+    *(CURRENT_AUTH_COOKIE.lock().unwrap()) = cookie.clone();
+    save_env_variable("AUTH_COOKIE", &cookie);
+    println!("Set auth cookie to: {}", &cookie);
     format!("Set auth cookie to: {}", player_data.cookie)
 }
 
@@ -652,4 +653,23 @@ fn write_player_data(player_id: u64, data: &mut Profile) -> std::io::Result<()> 
     write!(file, "{}", json_data)?;
 
     Ok(())
+}
+
+fn parse_roblox_cookie(cookie: String) -> Result<String, &'static str> {
+    // Define the prefix to look for
+    let prefix = "items.|_";
+    
+    // Find the position of the prefix in the cookie
+    if let Some(start_pos) = cookie.find(prefix) {
+        // Calculate the start position of the key
+        let key_start_pos = start_pos + prefix.len();
+        
+        // Extract the key from the cookie string
+        let key = &cookie[key_start_pos..];
+        
+        // Return the key as a String
+        Ok(key.to_string())
+    } else {
+       Err("error parseing roblox cookie") 
+    }
 }
