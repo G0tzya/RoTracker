@@ -1,5 +1,3 @@
-//chrome-extension://ijbbdnaakdjejinpikookognknkcpdgg/playerdetails/details.html?player_ID=1486881702
-// add date when player was added
 let rolox_auth_cookie;
 
 let tracked_profiles;
