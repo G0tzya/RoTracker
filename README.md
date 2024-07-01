@@ -53,8 +53,8 @@ The server is very lightweight and opens up in a terminal from an executable.
 
 To use the RoTracker extension, you will need to provide your Roblox ID and Roblox cookie. You can find how to get those here:
 
-- [Roblox ID]([https://github.com/Gotzya/RoTracker/releases/tag/v1.0.0](https://brightchamps.com/blog/how-to-find-roblox-user-id/))
-- [Roblox Cookie]([https://github.com/Gotzya/RoTracker/releases/tag/v1.0.0](https://www.youtube.com/watch?v=zkSnBV7oOZM))
+- [Roblox ID](https://brightchamps.com/blog/how-to-find-roblox-user-id/)
+- [Roblox Cookie](https://www.youtube.com/watch?v=zkSnBV7oOZM)
 
 Once you have these two, go to the RoTracker settings and enter them into their respective text boxes. Note you must press enter to confirm the values after pasting.
 
