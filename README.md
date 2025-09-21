@@ -1,5 +1,8 @@
 # 📊 RoTracker 📊
 
+⚠️ **Important Notice**  
+> This project is **no longer maintained**. Public development has been discontinued because RoTracker has transitioned into a private, product-based project. The code here is provided as-is, with no further updates, bug fixes, or support.
+
 RoTracker is a Chrome extension that enables users to track the playtime of other Roblox players. While Roblox does not natively support this feature and no online metric services currently offer it, RoTracker fills this gap. The extension takes advantage of changes in Roblox's friend API to monitor playtime in real-time. It achieves this by collecting data through an external server hosted on the user's localhost, which makes requests to the Roblox friends API. The collected data is then used to calculate a player's playtime, as well as several more metrics mentioned below, even when Chrome is closed.
 
 ## Features ✨
